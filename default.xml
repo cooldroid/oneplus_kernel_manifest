@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com"
+           revision="refs/tags/android-6.0.1_r13" />
+
+  <remote  name="github"
+           fetch=".."
+           review="review.cyanogenmod.org" />
+
+  <remote name="bitbucket" fetch="https://bitbucket.org"/>
+
+  <remote  name="private"
+           fetch="ssh://git@github.com" />
+
+  <default revision="refs/heads/cm-13.0"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+  <project path="kernel/oneplus/msm8974" name="cooldroid/android_kernel_oneplus_msm8974" revision="lightning-caf" />
+  <!--project path="kernel/oneplus/msm8974" name="sultanxda/android_kernel_oneplus_msm8974" revision="cm-13.0-caf" /-->
+  <!--project path="kernel/oneplus/msm8974" name="acuicultor/android_kernel_oneplus_msm8974-1" revision="radioactive" /-->
+  <!--project path="kernel/oneplus/msm8974" name="nikhil18/lightning-kernel-bacon" revision="lightning-caf" /-->
+  <!--project path="kernel/oneplus/msm8974" name="anarkia1976/AK-OnePlusOne-CAF" revision="CM12.1" /-->
+
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-5.3" name="UBERTC/arm-eabi-5.3" groups="pdk,linux,arm" revision="master" remote="bitbucket"/>
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.3" name="UBERTC/arm-linux-androideabi-5.3" groups="pdk,linux,arm" revision="master" remote="bitbucket" />
+
+</manifest>
